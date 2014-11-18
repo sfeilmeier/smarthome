@@ -7,10 +7,14 @@
  */
 package org.eclipse.smarthome.binding.fems.handler;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
+import org.bulldog.beagleboneblack.BBBNames;
+import org.bulldog.core.platform.Board;
+import org.bulldog.core.platform.Platform;
+import org.bulldog.core.util.BulldogUtil;
+import org.eclipse.smarthome.binding.fems.internal.FemsPersistence;
 import org.eclipse.smarthome.binding.fems.internal.io.AnalogOutput;
 import org.eclipse.smarthome.binding.fems.internal.io.DigitalOutput;
 import org.eclipse.smarthome.binding.fems.internal.io.GpioPin;
@@ -42,17 +46,17 @@ public class IoHandler extends BaseThingHandler {
 		public void initialize() {
 			super.initialize();
 			Configuration config = getThing().getConfiguration();
-//X			FemsPersistence.initialize(config);
+			FemsPersistence.initialize(config);
 			
 			System.out.println("X 1");
-//X			Board board = Platform.createBoard();
+			Board board = Platform.createBoard();
 			System.out.println("X 2");
-//X			org.bulldog.core.gpio.DigitalOutput output = board.getPin(BBBNames.P8_12).as(org.bulldog.core.gpio.DigitalOutput.class);
+			org.bulldog.core.gpio.DigitalOutput output = board.getPin(BBBNames.P8_12).as(org.bulldog.core.gpio.DigitalOutput.class);
 			System.out.println("X 3");
-//X	        output.high();
-//X	        BulldogUtil.sleepMs(500);
-//X	        output.low();
-//X	        BulldogUtil.sleepMs(500); 
+	        output.high();
+	        BulldogUtil.sleepMs(500);
+	        output.low();
+	        BulldogUtil.sleepMs(500); 
 			
 			
 			
