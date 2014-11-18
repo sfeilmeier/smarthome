@@ -9,6 +9,5 @@
 	<classpathentry kind="lib" path="lib/httpcore-4.3.3.jar"/>
 	<classpathentry kind="lib" path="lib/jamod-1.2.jar"/>
 	<classpathentry kind="lib" path="lib/json-20140107.jar"/>
-	<classpathentry kind="lib" path="lib/libbulldog-linux.so"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
